@@ -34,7 +34,7 @@ public class TmmCrackUtil {
      * @date 2020/11/29
      */
     public static void compress() {
-        String[] cmds = new String[]{"sh", "-c", "jar cvf tmm-cracked.jar META-INF org logback.xml *.txt *.properties"};
+        String[] cmds = new String[]{"sh", "-c", "jar cfm tmm-cracked.jar META-INF/MANIFEST.MF META-INF org logback.xml *.txt *.properties"};
         SystemUtil.execStr(Charset.defaultCharset(), cmds);
     }
 

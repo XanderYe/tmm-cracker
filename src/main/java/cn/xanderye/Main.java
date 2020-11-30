@@ -39,6 +39,7 @@ public class Main {
             TmmCrackUtil.compress();
             System.out.println("删除临时文件");
             TmmCrackUtil.remove();
+            System.out.println("破解成功，文件名：tmm-cracked.jar");
         }  catch (FileNotFoundException e) {
             System.out.println("文件不存在");
             e.printStackTrace();
@@ -55,7 +56,9 @@ public class Main {
             StringBuilder sb = new StringBuilder();
             String line;
             while ((line = zhBr.readLine()) != null) {
-                if (line.startsWith("wizard.disclaimer.long")) {
+                if (line.startsWith("tmm.license.unregistered")) {
+                    line = "tmm.license.unregistered=Crack by XanderYe.";
+                } else if (line.startsWith("wizard.disclaimer.long")) {
                     line += "\\n\\ntinyMediaManager4.0.4由XanderYe破解，去除了50部电影、10部电视剧限制。\\n仅供学习交流，严禁用于商业用途，请于24小时内删除。";
                 }
                 sb.append(line).append("\r\n");
