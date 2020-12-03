@@ -59,7 +59,7 @@ public class Main {
                 if (line.startsWith("tmm.license.unregistered")) {
                     line = "tmm.license.unregistered=Crack by XanderYe.";
                 } else if (line.startsWith("wizard.disclaimer.long")) {
-                    line += "\\n\\ntinyMediaManager4.0.4由XanderYe破解，去除了50部电影、10部电视剧限制。\\n仅供学习交流，严禁用于商业用途，请于24小时内删除。";
+                    line += "\\n\\ntinyMediaManager由XanderYe破解，去除了50部电影、10部电视剧限制。\\n仅供学习交流，严禁用于商业用途，请于24小时内删除。";
                 }
                 sb.append(line).append("\r\n");
             }
