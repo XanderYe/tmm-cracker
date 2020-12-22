@@ -1,4 +1,4 @@
-# tingmediamanager 破解
+# tinymediamanager 破解
 
 ## 描述
 
