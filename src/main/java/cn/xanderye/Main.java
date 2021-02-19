@@ -17,6 +17,9 @@ public class Main {
         if (SystemUtil.isWindows()) {
             throw new RuntimeException("tmm.jar中包含Windows系统保留关键字，无法完成此操作，请在linux下运行");
         }
+        if (SystemUtil.isMac()) {
+            System.out.println("macOS默认大小写不敏感，会导致生成的程序报错类丢失，请知悉");
+        }
         String tmmJarPath = workDir + File.separator + "tmm.jar";
         try {
             File file = new File(tmmJarPath);

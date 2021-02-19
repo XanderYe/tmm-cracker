@@ -123,6 +123,10 @@ public class SystemUtil {
         return System.getProperty("os.name").toLowerCase().contains("windows");
     }
 
+    public static boolean isMac() {
+        return System.getProperty("os.name").toLowerCase().contains("mac");
+    }
+
     /**
      * 获取系统字符编码
      * @param
