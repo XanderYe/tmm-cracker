@@ -18,4 +18,5 @@ tinymediamanager 破解程序，去除50部电影、10部电视剧的限制，�
 4. 提取官网下载的tmm_版本_win.zip中的tmm.jar，目录结构为<br/>
 |--tmm.jar<br/>
 |--tmm-cracker-jar-with-dependencies.jar<br/>
-5. 执行 `java -jar tmm-cracker-jar-with-dependencies.jar`，生成 tmm-cracked.jar，提取出来替换tmm.jar即可
+5. 确认安装了jdk并配置了环境变量，保证jar命令可用
+6. 执行 `java -jar tmm-cracker-jar-with-dependencies.jar`，生成 tmm-cracked.jar，提取出来替换tmm.jar即可
