@@ -28,4 +28,3 @@ tinymediamanager 4.0.6 破解程序，去除50部电影、10部电视剧的限�
 ## 各平台版本
 
 只要版本号一致，不管windows、linux、mac还是docker版本，都可直接替换tmm.jar达到破解效果。
-新增 [docker镜像](docker)
