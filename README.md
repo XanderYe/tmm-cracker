@@ -24,3 +24,8 @@ tinymediamanager 4.0.6 破解程序，去除50部电影、10部电视剧的限�
 |--tmm-cracker-jar-with-dependencies.jar<br/>
 5. 确认安装了jdk并配置了环境变量，保证jar命令可用
 6. 执行 `java -jar tmm-cracker-jar-with-dependencies.jar`，生成 tmm-cracked.jar，提取出来替换tmm.jar即可
+
+## 各平台版本
+
+只要版本号一致，不管windows、linux、mac还是docker版本，都可直接替换tmm.jar达到破解效果。
+新增 [docker镜像](docker)
