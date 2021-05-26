@@ -4,12 +4,13 @@
 FROM jlesage/baseimage-gui:alpine-3.12-glibc
 
 # Define software versions.
-ARG JAVAJRE_VERSION=8.282.08.1
-ARG TMM_VERSION=4.1.5.1
+ENV JAVAJRE_VERSION=8.282.08.1
+ENV TMM_VERSION=4.1.5.1
 
 # Define software download URLs.
-ARG TMM_URL=https://release.tinymediamanager.org/v4/dist/tmm_${TMM_VERSION}_linux.tar.gz
-ARG JAVAJRE_URL=https://corretto.aws/downloads/resources/${JAVAJRE_VERSION}/amazon-corretto-${JAVAJRE_VERSION}-linux-x64.tar.gz
+ENV TMM_URL=https://release.tinymediamanager.org/v4/dist/tmm_${TMM_VERSION}_linux.tar.gz
+ENV TMM_CRACKED_URL=https://github.com/XanderYe/tmm-cracker/releases/download/${TMM_VERSION}/tmm-${TMM_VERSION}.zip
+ENV JAVAJRE_URL=https://corretto.aws/downloads/resources/${JAVAJRE_VERSION}/amazon-corretto-${JAVAJRE_VERSION}-linux-x64.tar.gz
 ENV JAVA_HOME=/opt/jre/bin
 ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/jre/bin
 # Define working directory.
@@ -17,9 +18,13 @@ WORKDIR /tmp
 
 # Download TinyMediaManager
 RUN \
+    apk update && \
+    apk add ca-certificates && \
+    update-ca-certificates && \
+    apk --no-cache add openssl wget && \
     mkdir -p /defaults && \
-    wget ${TMM_URL} -O /defaults/tmm.tar.gz \
-    wget https://github.com/XanderYe/tmm-cracker/releases/download/${TMM_VERSION}/tmm-${TMM_VERSION}.zip -O /defaults/tmm.zip
+    wget ${TMM_URL} -O /defaults/tmm.tar.gz && \
+    wget ${TMM_CRACKED_URL} -O /defaults/tmm.zip
 
 # Download and install Oracle JRE.
 # NOTE: This is needed only for the 7-Zip-JBinding workaround.
