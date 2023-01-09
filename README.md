@@ -1,4 +1,4 @@
-# tinymediamanager 破解
+# ~~tinymediamanager 破解~~(新版本已失效)
 
 ## 描述
 
